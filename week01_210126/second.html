@@ -1,0 +1,750 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital OPD Management System">
+    <meta name="keywords" content="hospital, OPD, outpatient, patient management">
+    <title>Hospital OPD Management System</title>
+</head>
+<body>
+
+    <img src="https://via.placeholder.com/1000x150/2196F3/ffffff?text=Hospital+OPD+Management+System" alt="Hospital Header" width="1000" height="150">
+    <br><br>
+
+    <h1>Hospital Out Patient Department (OPD) Management</h1>
+
+    <img src="https://via.placeholder.com/50x50/FF5722/ffffff?text=Hospital" alt="Hospital Icon" width="50" height="50">
+    <strong>Welcome to OPD Management Portal</strong>
+    <br><br>
+
+    <hr>
+
+    <h2>Quick Links Navigation</h2>
+    <a href="#register">Register Patient</a> | 
+    <a href="#appointment">Book Appointment</a> | 
+    <a href="#queue">View Queue</a> | 
+    <a href="#doctors">Doctor Availability</a> | 
+    <a href="#reports">Reports</a>
+    <br><br>
+
+    <hr>
+
+    <h2 id="register">Patient Registration</h2>
+
+    <img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=NEW" alt="New Patient" width="40" height="40">
+    <strong>New Patient Check-in Form</strong>
+    <br><br>
+
+    <form method="POST" action="submit.html">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="patientId">Patient ID:</label>
+            <input type="text" id="patientId" name="patientId" placeholder="Auto-generated" readonly>
+            <br><br>
+
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" required>
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" required>
+            <br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+            <br><br>
+
+            <label for="bloodGroup">Blood Group:</label>
+            <select name="bloodGroup" id="bloodGroup" required>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br><br>
+
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" rows="3" cols="40"></textarea>
+            <br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Medical Information</legend>
+
+            <label for="department">Department:</label>
+            <select name="department" id="department" required>
+                <option value="">Select Department</option>
+                <option value="general">General Medicine</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="dermatology">Dermatology</option>
+                <option value="dental">Dental</option>
+                <option value="neurology">Neurology</option>
+                <option value="ent">ENT</option>
+            </select>
+            <br><br>
+
+            <label for="chiefComplaint">Chief Complaint:</label>
+            <textarea name="chiefComplaint" id="chiefComplaint" rows="3" cols="40" placeholder="Describe symptoms..."></textarea>
+            <br><br>
+
+            <label for="medicalHistory">Medical History:</label>
+            <textarea name="medicalHistory" id="medicalHistory" rows="3" cols="40" placeholder="Any allergies or previous conditions..."></textarea>
+            <br><br>
+
+        </fieldset>
+
+        <button type="submit">Register Patient</button>
+        <button type="reset">Clear</button>
+
+    </form>
+
+    <br><br>
+    <hr>
+
+    <h2 id="appointment">Book Appointment</h2>
+
+    <img src="https://via.placeholder.com/40x40/FFC107/ffffff?text=APT" alt="Appointment" width="40" height="40">
+    <strong>Schedule Appointment</strong>
+    <br><br>
+
+    <form method="POST" action="submit.html">
+
+        <label for="appointmentPatient">Patient Name:</label>
+        <input type="text" id="appointmentPatient" name="appointmentPatient" required>
+        <br><br>
+
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required>
+        <br><br>
+
+        <label for="appointmentTime">Appointment Time:</label>
+        <input type="time" id="appointmentTime" name="appointmentTime" required>
+        <br><br>
+
+        <label for="doctor">Select Doctor:</label>
+        <select name="doctor" id="doctor" required>
+            <option value="">Select Doctor</option>
+            <option value="dr-sharma">Dr. Sharma (General)</option>
+            <option value="dr-patel">Dr. Patel (Cardiology)</option>
+            <option value="dr-khan">Dr. Khan (Orthopedics)</option>
+            <option value="dr-joshi">Dr. Joshi (Pediatrics)</option>
+        </select>
+        <br><br>
+
+        <label for="notes">Additional Notes:</label>
+        <textarea name="notes" id="notes" rows="3" cols="40"></textarea>
+        <br><br>
+
+        <button type="submit">Book Appointment</button>
+        <button type="reset">Clear</button>
+
+    </form>
+
+    <br><br>
+    <hr>
+
+    <h2 id="queue">Patient Queue/OPD Status</h2>
+
+    <img src="https://via.placeholder.com/40x40/9C27B0/ffffff?text=QUEUE" alt="Queue" width="40" height="40">
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Queue #</th>
+            <th>Patient Name</th>
+            <th>Patient Image</th>
+            <th>Department</th>
+            <th>Arrival Time</th>
+            <th>Doctor</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Rajesh Kumar</td>
+            <td><img src="https://via.placeholder.com/40x40/673AB7/ffffff?text=RK" alt="Patient" width="40" height="40"></td>
+            <td>General Medicine</td>
+            <td>09:00 AM</td>
+            <td>Dr. Sharma</td>
+            <td>Completed</td>
+            <td><button>Details</button></td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Priya Singh</td>
+            <td><img src="https://via.placeholder.com/40x40/EC407A/ffffff?text=PS" alt="Patient" width="40" height="40"></td>
+            <td>Cardiology</td>
+            <td>09:15 AM</td>
+            <td>Dr. Patel</td>
+            <td>In Progress</td>
+            <td><button>Details</button></td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Amit Verma</td>
+            <td><img src="https://via.placeholder.com/40x40/00BCD4/ffffff?text=AV" alt="Patient" width="40" height="40"></td>
+            <td>Orthopedics</td>
+            <td>09:30 AM</td>
+            <td>Dr. Khan</td>
+            <td>Waiting</td>
+            <td><button>Details</button></td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>Neha Gupta</td>
+            <td><img src="https://via.placeholder.com/40x40/FF7043/ffffff?text=NG" alt="Patient" width="40" height="40"></td>
+            <td>Pediatrics</td>
+            <td>09:45 AM</td>
+            <td>Dr. Joshi</td>
+            <td>Waiting</td>
+            <td><button>Details</button></td>
+        </tr>
+        <tr>
+            <td>005</td>
+            <td>Vikram Desai</td>
+            <td><img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=VD" alt="Patient" width="40" height="40"></td>
+            <td>General Medicine</td>
+            <td>10:00 AM</td>
+            <td>Dr. Sharma</td>
+            <td>Waiting</td>
+            <td><button>Details</button></td>
+        </tr>
+    </table>
+
+    <br><br>
+    <hr>
+
+    <h2 id="doctors">Doctor Availability</h2>
+
+    <img src="https://via.placeholder.com/40x40/2196F3/ffffff?text=DOC" alt="Doctor" width="40" height="40">
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Doctor Name</th>
+            <th>Doctor Image</th>
+            <th>Specialty</th>
+            <th>Available Time</th>
+            <th>Room</th>
+            <th>Patients Seen</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Dr. Rajeev Sharma</td>
+            <td><img src="https://via.placeholder.com/50x50/3F51B5/ffffff?text=RS" alt="Doctor" width="50" height="50"></td>
+            <td>General Medicine</td>
+            <td>9:00 AM - 2:00 PM</td>
+            <td>101</td>
+            <td>8/20</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Dr. Amit Patel</td>
+            <td><img src="https://via.placeholder.com/50x50/1976D2/ffffff?text=AP" alt="Doctor" width="50" height="50"></td>
+            <td>Cardiology</td>
+            <td>9:00 AM - 1:00 PM</td>
+            <td>202</td>
+            <td>6/15</td>
+            <td>Busy</td>
+        </tr>
+        <tr>
+            <td>Dr. Hassan Khan</td>
+            <td><img src="https://via.placeholder.com/50x50/1565C0/ffffff?text=HK" alt="Doctor" width="50" height="50"></td>
+            <td>Orthopedics</td>
+            <td>10:00 AM - 3:00 PM</td>
+            <td>303</td>
+            <td>5/18</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Dr. Sunita Joshi</td>
+            <td><img src="https://via.placeholder.com/50x50/0D47A1/ffffff?text=SJ" alt="Doctor" width="50" height="50"></td>
+            <td>Pediatrics</td>
+            <td>9:30 AM - 2:30 PM</td>
+            <td>104</td>
+            <td>10/20</td>
+            <td>Available</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <hr>
+
+    <h2>Department Services</h2>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Department</th>
+            <th>Department Image</th>
+            <th>Services</th>
+            <th>Contact</th>
+            <th>Open Hours</th>
+        </tr>
+        <tr>
+            <td>General Medicine</td>
+            <td><img src="https://via.placeholder.com/60x60/FF6B6B/ffffff?text=GM" alt="General Medicine" width="60" height="60"></td>
+            <td>Check-ups, Diagnosis, Treatment</td>
+            <td>Ext. 101</td>
+            <td>9:00 AM - 5:00 PM</td>
+        </tr>
+        <tr>
+            <td>Cardiology</td>
+            <td><img src="https://via.placeholder.com/60x60/4ECDC4/ffffff?text=CD" alt="Cardiology" width="60" height="60"></td>
+            <td>Heart Check-ups, ECG, Consultation</td>
+            <td>Ext. 202</td>
+            <td>9:00 AM - 4:00 PM</td>
+        </tr>
+        <tr>
+            <td>Orthopedics</td>
+            <td><img src="https://via.placeholder.com/60x60/45B7D1/ffffff?text=OR" alt="Orthopedics" width="60" height="60"></td>
+            <td>Bone Injuries, Physiotherapy</td>
+            <td>Ext. 303</td>
+            <td>10:00 AM - 5:00 PM</td>
+        </tr>
+        <tr>
+            <td>Pediatrics</td>
+            <td><img src="https://via.placeholder.com/60x60/FFA726/ffffff?text=PD" alt="Pediatrics" width="60" height="60"></td>
+            <td>Child Health, Vaccination, Care</td>
+            <td>Ext. 104</td>
+            <td>9:30 AM - 4:30 PM</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <hr>
+
+    <h2 id="reports">Daily OPD Report</h2>
+
+    <img src="https://via.placeholder.com/40x40/00897B/ffffff?text=RPT" alt="Report" width="40" height="40">
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Report Date</th>
+            <th>Total Patients</th>
+            <th>Completed</th>
+            <th>Pending</th>
+            <th>Referrals</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>21-01-2026</td>
+            <td>45</td>
+            <td>38</td>
+            <td>7</td>
+            <td>5</td>
+            <td><button>View</button> <button>Print</button></td>
+        </tr>
+        <tr>
+            <td>20-01-2026</td>
+            <td>42</td>
+            <td>42</td>
+            <td>0</td>
+            <td>4</td>
+            <td><button>View</button> <button>Print</button></td>
+        </tr>
+        <tr>
+            <td>19-01-2026</td>
+            <td>48</td>
+            <td>47</td>
+            <td>1</td>
+            <td>6</td>
+            <td><button>View</button> <button>Print</button></td>
+        </tr>
+    </table>
+
+    <br><br>
+    <hr>
+
+    <h2>OPD Statistics</h2>
+
+    <table border="0" width="100%">
+        <tr>
+            <td align="center">
+                <img src="https://via.placeholder.com/100x100/FF5722/ffffff?text=Total+Patients" alt="Total Patients" width="100" height="100">
+                <br>
+                <strong>Total Patients Today</strong>
+                <br>
+                <h3>45</h3>
+            </td>
+            <td align="center">
+                <img src="https://via.placeholder.com/100x100/4CAF50/ffffff?text=Completed" alt="Completed" width="100" height="100">
+                <br>
+                <strong>Completed</strong>
+                <br>
+                <h3>38</h3>
+            </td>
+            <td align="center">
+                <img src="https://via.placeholder.com/100x100/FFC107/ffffff?text=Pending" alt="Pending" width="100" height="100">
+                <br>
+                <strong>Pending</strong>
+                <br>
+                <h3>7</h3>
+            </td>
+            <td align="center">
+                <img src="https://via.placeholder.com/100x100/2196F3/ffffff?text=Avg+Time" alt="Average Time" width="100" height="100">
+                <br>
+                <strong>Average Wait Time</strong>
+                <br>
+                <h3>15 min</h3>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+    <hr>
+
+    <h2>Hospital Information</h2>
+
+    <img src="https://via.placeholder.com/400x200/E91E63/ffffff?text=Hospital+Building" alt="Hospital" width="400" height="200">
+    <br><br>
+
+    <p>
+        <strong>Hospital Name:</strong> City Health Medical Center<br>
+        <strong>Address:</strong> 123 Medical Complex, Health Street, City 400001<br>
+        <strong>Phone:</strong> +91-22-1234-5678<br>
+        <strong>Email:</strong> opd@cityhospital.com<br>
+        <strong>Website:</strong> <a href="https://www.cityhospital.com">www.cityhospital.com</a><br>
+        <strong>Emergency Contact:</strong> +91-22-9876-5432
+    </p>
+
+    <hr>
+
+    <h2>Quick Links</h2>
+
+    <table border="0">
+        <tr>
+            <td><a href="#register">Register Patient</a></td>
+            <td><a href="#appointment">Book Appointment</a></td>
+            <td><a href="#queue">View Queue</a></td>
+        </tr>
+        <tr>
+            <td><a href="#doctors">Doctor Availability</a></td>
+            <td><a href="#reports">View Reports</a></td>
+            <td><a href="https://www.example.com">Feedback</a></td>
+        </tr>
+    </table>
+
+    <br><br>
+    <img src="https://via.placeholder.com/1000x100/424242/ffffff?text=Copyright+2026+City+Health+Medical+Center" alt="Footer" width="1000" height="100">
+
+</body>
+</html>
+
+    <img src="https://via.placeholder.com/800x100/4CAF50/ffffff?text=Registration+Portal" alt="Registration Portal Banner" width="800" height="100">
+    <br><br>
+
+    <h1>Registration Form</h1>
+
+    <img src="https://via.placeholder.com/100x100/2196F3/ffffff?text=User" alt="User Icon" width="100" height="100">
+    <br><br>
+
+    <form method="POST" action="submit.html">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <img src="https://via.placeholder.com/20x20/FF9800/ffffff?text=@" alt="Email Icon" width="20" height="20">
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="phone">Phone:</label>
+        <img src="https://via.placeholder.com/20x20/FF5722/ffffff?text=P" alt="Phone Icon" width="20" height="20">
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <img src="https://via.placeholder.com/20x20/9C27B0/ffffff?text=*" alt="Password Icon" width="20" height="20">
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <img src="https://via.placeholder.com/20x20/9C27B0/ffffff?text=*" alt="Password Icon" width="20" height="20">
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <br><br>
+
+        <label for="gender">Gender:</label>
+        <img src="https://via.placeholder.com/20x20/00BCD4/ffffff?text=G" alt="Gender Icon" width="20" height="20">
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <label for="country">Country:</label>
+        <img src="https://via.placeholder.com/20x20/03A9F4/ffffff?text=C" alt="Country Icon" width="20" height="20">
+        <select name="country" id="country" required>
+            <option value="">Select Country</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="india">India</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+        </select>
+        <br><br>
+
+        <label for="address">Address:</label>
+        <img src="https://via.placeholder.com/20x20/673AB7/ffffff?text=A" alt="Address Icon" width="20" height="20">
+        <textarea name="address" id="address" rows="3" cols="30"></textarea>
+        <br><br>
+
+        <label for="agree">
+            <img src="https://via.placeholder.com/20x20/4CAF50/ffffff?text=T" alt="Terms Icon" width="20" height="20">
+            <input type="checkbox" id="agree" name="agree" required>
+            I agree to Terms and Conditions
+        </label>
+        <br><br>
+
+        <img src="https://via.placeholder.com/150x50/4CAF50/ffffff?text=Register" alt="Register Button Visual" width="150" height="50">
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+
+    </form>
+
+    <br><br>
+    <hr>
+    <br>
+
+    <h2>Registration Benefits</h2>
+    
+    <img src="https://via.placeholder.com/200x150/FF6B6B/ffffff?text=Secure" alt="Security Benefits" width="200" height="150">
+    <img src="https://via.placeholder.com/200x150/4ECDC4/ffffff?text=Easy+Access" alt="Easy Access Benefits" width="200" height="150">
+    <img src="https://via.placeholder.com/200x150/45B7D1/ffffff?text=Support" alt="24/7 Support" width="200" height="150">
+    <br><br>
+
+    <img src="https://via.placeholder.com/800x200/4CAF50/ffffff?text=Welcome+to+Registration" alt="Footer Banner" width="800" height="200">
+
+    <hr>
+
+    <h2>Registration Form Information</h2>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Field Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Icon</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Text Input</td>
+            <td>Enter your full name</td>
+            <td><img src="https://via.placeholder.com/30x30/2196F3/ffffff?text=N" alt="Name" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>Email Input</td>
+            <td>Enter valid email address</td>
+            <td><img src="https://via.placeholder.com/30x30/FF9800/ffffff?text=@" alt="Email" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>Tel Input</td>
+            <td>Enter phone number</td>
+            <td><img src="https://via.placeholder.com/30x30/FF5722/ffffff?text=P" alt="Phone" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>Password Input</td>
+            <td>Create secure password</td>
+            <td><img src="https://via.placeholder.com/30x30/9C27B0/ffffff?text=*" alt="Password" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>Radio Button</td>
+            <td>Select your gender</td>
+            <td><img src="https://via.placeholder.com/30x30/00BCD4/ffffff?text=G" alt="Gender" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>Dropdown</td>
+            <td>Select your country</td>
+            <td><img src="https://via.placeholder.com/30x30/03A9F4/ffffff?text=C" alt="Country" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>Textarea</td>
+            <td>Enter your address</td>
+            <td><img src="https://via.placeholder.com/30x30/673AB7/ffffff?text=A" alt="Address" width="30" height="30"></td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Registration Requirements Table</h2>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Requirement</th>
+                <th>Status</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Valid Email Address</td>
+                <td>Required</td>
+                <td><img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=OK" alt="Required" width="40" height="40"></td>
+            </tr>
+            <tr>
+                <td>Strong Password</td>
+                <td>Required</td>
+                <td><img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=OK" alt="Required" width="40" height="40"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>Required</td>
+                <td><img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=OK" alt="Required" width="40" height="40"></td>
+            </tr>
+            <tr>
+                <td>Age 18+</td>
+                <td>Required</td>
+                <td><img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=OK" alt="Required" width="40" height="40"></td>
+            </tr>
+            <tr>
+                <td>Accept Terms</td>
+                <td>Required</td>
+                <td><img src="https://via.placeholder.com/40x40/4CAF50/ffffff?text=OK" alt="Required" width="40" height="40"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Embedded Content - Registration Guide</h2>
+
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="400" height="300" title="Registration Guide Video"></iframe>
+
+    <hr>
+
+    <h2>Country Information Map</h2>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3151.8354345093706!2d144.9537353!3d-37.8162099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1f9006c62d!2sVictoria!5e0!3m2!1sen!2sau!4v1234567890" width="400" height="300" title="World Map"></iframe>
+
+    <hr>
+
+    <h2>Benefits Gallery</h2>
+
+    <table border="0" width="100%">
+        <tr>
+            <td align="center">
+                <img src="https://via.placeholder.com/150x150/FF6B6B/ffffff?text=Secure" alt="Secure Registration" width="150" height="150">
+                <br>
+                <strong>Secure</strong>
+                <br>
+                <small>Your data is encrypted</small>
+            </td>
+            <td align="center">
+                <img src="https://via.placeholder.com/150x150/4ECDC4/ffffff?text=Fast" alt="Fast Process" width="150" height="150">
+                <br>
+                <strong>Fast</strong>
+                <br>
+                <small>Complete in 2 minutes</small>
+            </td>
+            <td align="center">
+                <img src="https://via.placeholder.com/150x150/45B7D1/ffffff?text=Support" alt="24/7 Support" width="150" height="150">
+                <br>
+                <strong>Support</strong>
+                <br>
+                <small>Always here to help</small>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Country Registration Statistics</h2>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Country</th>
+            <th>Flag Image</th>
+            <th>Registered Users</th>
+            <th>Growth</th>
+        </tr>
+        <tr>
+            <td>United States</td>
+            <td><img src="https://via.placeholder.com/50x30/FF0000/ffffff?text=USA" alt="USA Flag" width="50" height="30"></td>
+            <td>50,000</td>
+            <td><img src="https://via.placeholder.com/80x20/4CAF50/ffffff?text=+25%" alt="Growth Chart" width="80" height="20"></td>
+        </tr>
+        <tr>
+            <td>United Kingdom</td>
+            <td><img src="https://via.placeholder.com/50x30/0052CC/ffffff?text=UK" alt="UK Flag" width="50" height="30"></td>
+            <td>35,000</td>
+            <td><img src="https://via.placeholder.com/80x20/4CAF50/ffffff?text=+18%" alt="Growth Chart" width="80" height="20"></td>
+        </tr>
+        <tr>
+            <td>India</td>
+            <td><img src="https://via.placeholder.com/50x30/FF9933/ffffff?text=IND" alt="India Flag" width="50" height="30"></td>
+            <td>75,000</td>
+            <td><img src="https://via.placeholder.com/80x20/4CAF50/ffffff?text=+42%" alt="Growth Chart" width="80" height="20"></td>
+        </tr>
+        <tr>
+            <td>Canada</td>
+            <td><img src="https://via.placeholder.com/50x30/FF0000/ffffff?text=CAN" alt="Canada Flag" width="50" height="30"></td>
+            <td>28,000</td>
+            <td><img src="https://via.placeholder.com/80x20/4CAF50/ffffff?text=+15%" alt="Growth Chart" width="80" height="20"></td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Testimonials - Embedded Frame</h2>
+
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=" width="400" height="500" title="Testimonials"></iframe>
+
+    <hr>
+
+    <h2>Help Center</h2>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Help Topic</th>
+            <th>Image</th>
+            <th>Link/Info</th>
+        </tr>
+        <tr>
+            <td>Password Recovery</td>
+            <td><img src="https://via.placeholder.com/50x50/FFC107/ffffff?text=?" alt="Help" width="50" height="50"></td>
+            <td><a href="#">How to reset your password</a></td>
+        </tr>
+        <tr>
+            <td>Account Verification</td>
+            <td><img src="https://via.placeholder.com/50x50/2196F3/ffffff?text=V" alt="Verify" width="50" height="50"></td>
+            <td><a href="#">Verify your account</a></td>
+        </tr>
+        <tr>
+            <td>Contact Support</td>
+            <td><img src="https://via.placeholder.com/50x50/4CAF50/ffffff?text=@" alt="Email" width="50" height="50"></td>
+            <td><a href="#">Email us at support@example.com</a></td>
+        </tr>
+    </table>
+
+</body>
+</html>
