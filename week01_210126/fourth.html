@@ -3,292 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hospital OPD with Lists, Frames and Multimedia">
-    <title>Hospital OPD - Forms, Lists, Frames & Multimedia</title>
+    <title>Hospital OPD Registration Form</title>
 </head>
 <body>
 
-    <!-- Header Banner -->
-    <img src="https://via.placeholder.com/1200x150/1976D2/ffffff?text=Hospital+OPD+System+-+Lists+Frames+Multimedia" alt="Hospital Header" width="1200" height="150">
-    <br><br>
-
-    <!-- Navigation -->
-    <h3>📋 Hospital OPD Navigation:</h3>
-    <a href="#form">Registration Form</a> | 
-    <a href="#lists">Department List</a> | 
-    <a href="#multimedia">Multimedia Guide</a> | 
-    <a href="#frames">Online Resources</a> | 
-    <a href="#schedule">Schedule</a>
-    <br><br>
-    <hr>
-
-    <!-- ============ SECTION 1: REGISTRATION FORM ============ -->
-    <h2 id="form">📝 Patient Registration Form</h2>
+    <h1>Hospital OPD Registration Form</h1>
 
     <form method="POST" action="submit.html">
         <fieldset>
-            <legend><strong>BASIC PATIENT INFORMATION</strong></legend>
+            <legend>BASIC PATIENT INFORMATION</legend>
 
-            <table border="0" width="100%">
-                <tr>
-                    <td width="50%">
-                        <label for="patientName"><strong>Patient Name:</strong> <span style="color:red;">*</span></label><br>
-                        <img src="https://via.placeholder.com/20x20/4CAF50/ffffff?text=N" alt="Name" width="20" height="20">
-                        <input type="text" id="patientName" name="patientName" required>
-                    </td>
-                    <td width="50%">
-                        <label for="patientAge"><strong>Age:</strong> <span style="color:red;">*</span></label><br>
-                        <img src="https://via.placeholder.com/20x20/FF9800/ffffff?text=A" alt="Age" width="20" height="20">
-                        <input type="number" id="patientAge" name="patientAge" required>
-                    </td>
-                </tr>
-            </table>
-            <br>
+            <p>
+                <label for="patientName">Patient Name: <span>*</span></label><br>
+                <input type="text" id="patientName" name="patientName" required>
+            </p>
 
-            <label for="patientEmail"><strong>Email:</strong></label><br>
-            <img src="https://via.placeholder.com/20x20/2196F3/ffffff?text=E" alt="Email" width="20" height="20">
-            <input type="email" id="patientEmail" name="patientEmail">
-            <br><br>
+            <p>
+                <label for="patientAge">Age: <span>*</span></label><br>
+                <input type="number" id="patientAge" name="patientAge" required>
+            </p>
 
-            <label for="patientPhone"><strong>Phone:</strong></label><br>
-            <img src="https://via.placeholder.com/20x20/F44336/ffffff?text=P" alt="Phone" width="20" height="20">
-            <input type="tel" id="patientPhone" name="patientPhone">
-            <br><br>
+            <p>
+                <label for="patientEmail">Email:</label><br>
+                <input type="email" id="patientEmail" name="patientEmail">
+            </p>
 
-            <label for="visitReason"><strong>Reason for Visit:</strong></label><br>
-            <img src="https://via.placeholder.com/20x20/9C27B0/ffffff?text=V" alt="Visit" width="20" height="20">
-            <textarea id="visitReason" name="visitReason" rows="3" cols="60"></textarea>
-            <br><br>
+            <p>
+                <label for="patientPhone">Phone:</label><br>
+                <input type="tel" id="patientPhone" name="patientPhone">
+            </p>
 
-            <button type="submit">Submit Registration</button>
-            <button type="reset">Clear</button>
+            <p>
+                <label for="visitReason">Reason for Visit:</label><br>
+                <textarea id="visitReason" name="visitReason" rows="4" cols="50"></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Clear</button>
+            </p>
 
         </fieldset>
     </form>
-
-    <br>
-    <hr>
-
-    <!-- ============ SECTION 2: DEPARTMENT LIST ============ -->
-    <h2 id="lists">🏥 Hospital Departments & Services</h2>
-
-    <h3><strong>Available Departments (Ordered List):</strong></h3>
-    <ol>
-        <li><strong>General Medicine</strong> - Treatment of common illnesses</li>
-        <li><strong>Cardiology</strong> - Heart and cardiovascular diseases</li>
-        <li><strong>Neurology</strong> - Brain and nervous system disorders</li>
-        <li><strong>Orthopedics</strong> - Bone, joint, and muscle treatment</li>
-        <li><strong>Dermatology</strong> - Skin diseases and conditions</li>
-        <li><strong>Pediatrics</strong> - Children's healthcare</li>
-        <li><strong>Gynecology</strong> - Women's health services</li>
-        <li><strong>Dental</strong> - Teeth and oral care</li>
-        <li><strong>Ophthalmology</strong> - Eye care and vision</li>
-        <li><strong>ENT</strong> - Ear, Nose, and Throat</li>
-    </ol>
-
-    <br>
-
-    <h3><strong>OPD Services (Unordered List):</strong></h3>
-    <ul>
-        <li>🩺 <strong>General Consultations</strong></li>
-        <li>💉 <strong>Vaccination Programs</strong></li>
-        <li>🔬 <strong>Laboratory Tests</strong></li>
-        <li>📸 <strong>Diagnostic Imaging (X-ray, Ultrasound)</strong></li>
-        <li>🩸 <strong>Blood Donation Camp</strong></li>
-        <li>📋 <strong>Health Checkup Camps</strong></li>
-        <li>💊 <strong>Pharmacy Services</strong></li>
-        <li>🚑 <strong>Emergency Services</strong></li>
-    </ul>
-
-    <br>
-
-    <h3><strong>Doctor Availability (Nested List):</strong></h3>
-    <ul>
-        <li><strong>General Medicine</strong>
-            <ul>
-                <li>Dr. Rajesh Kumar - Mon to Wed, 10 AM - 2 PM</li>
-                <li>Dr. Priya Singh - Thu to Sat, 2 PM - 6 PM</li>
-            </ul>
-        </li>
-        <li><strong>Cardiology</strong>
-            <ul>
-                <li>Dr. Amit Patel - Mon, Wed, Fri - 9 AM - 1 PM</li>
-                <li>Dr. Neha Sharma - Tue, Thu, Sat - 3 PM - 7 PM</li>
-            </ul>
-        </li>
-        <li><strong>Pediatrics</strong>
-            <ul>
-                <li>Dr. Anjali Verma - Daily 10 AM - 5 PM</li>
-                <li>Dr. Rohan Gupta - Daily 3 PM - 8 PM</li>
-            </ul>
-        </li>
-    </ul>
-
-    <br>
-
-    <h3><strong>Patient Guidelines (Ordered List):</strong></h3>
-    <ol>
-        <li><strong>Arrive 15 minutes early</strong> for your appointment</li>
-        <li><strong>Bring valid ID and insurance documents</strong></li>
-        <li><strong>Complete the registration form</strong> before seeing the doctor</li>
-        <li><strong>Fast if required</strong> for lab tests (as instructed)</li>
-        <li><strong>Keep recent medical reports</strong> with you</li>
-        <li><strong>Wear comfortable clothing</strong> for examination</li>
-        <li><strong>Inform receptionist about any allergies</strong></li>
-        <li><strong>Follow doctor's instructions</strong> carefully</li>
-    </ol>
-
-    <br>
-    <hr>
-
-    <!-- ============ SECTION 3: MULTIMEDIA CONTENT ============ -->
-    <h2 id="multimedia">🎬 Hospital Multimedia Guide</h2>
-
-    <h3><strong>📹 Health Awareness Video:</strong></h3>
-    <p><strong>Learn about Healthy Living Habits:</strong></p>
-    <video width="600" height="300" controls border="1">
-        <source src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <br><br>
-
-    <h3><strong>🎵 Hospital Ambience Audio:</strong></h3>
-    <p><strong>Calming Background Music for OPD Waiting Area:</strong></p>
-    <audio controls width="600">
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <br><br>
-
-    <h3><strong>📊 Health Statistics Video:</strong></h3>
-    <p><strong>Annual Hospital Performance Report:</strong></p>
-    <video width="600" height="300" controls>
-        <source src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_2mb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <br><br>
-
-    <!-- Embedded Multimedia in Table -->
-    <h3><strong>Multimedia Gallery:</strong></h3>
-    <table border="1" width="100%">
-        <tr>
-            <th align="center">
-                <img src="https://via.placeholder.com/150x150/4CAF50/ffffff?text=Video+1" alt="Health Tips" width="150" height="150"><br>
-                <strong>Health Tips</strong>
-            </th>
-            <th align="center">
-                <img src="https://via.placeholder.com/150x150/2196F3/ffffff?text=Video+2" alt="Exercise" width="150" height="150"><br>
-                <strong>Exercise Guide</strong>
-            </th>
-            <th align="center">
-                <img src="https://via.placeholder.com/150x150/FF9800/ffffff?text=Audio" alt="Meditation" width="150" height="150"><br>
-                <strong>Meditation Audio</strong>
-            </th>
-        </tr>
-    </table>
-
-    <br>
-    <hr>
-
-    <!-- ============ SECTION 4: EMBEDDED FRAMES ============ -->
-    <h2 id="frames">🌐 Online Resources & Frames</h2>
-
-    <h3><strong>Hospital Location Map (Embedded Frame):</strong></h3>
-    <p>Find us easily using Google Maps:</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8028256436666!2d72.84778131490266!3d19.084063487124547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87e7d7d7d7d%3A0x7d7d7d7d7d7d7d7d!2sGateway%20of%20India!5e0!3m2!1sen!2sin!4v1234567890" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-    <br><br>
-
-    <h3><strong>Hospital Website Preview (Embedded Frame):</strong></h3>
-    <p>Visit our hospital website:</p>
-    <iframe src="https://www.wikipedia.org/" width="600" height="400" border="1"></iframe>
-
-    <br><br>
-
-    <h3><strong>Appointment Booking System (Embedded Frame):</strong></h3>
-    <p>Book your appointment online:</p>
-    <iframe src="https://calendar.google.com/" width="600" height="400"></iframe>
-
-    <br><br>
-
-    <h3><strong>Patient Feedback Form (Embedded Frame):</strong></h3>
-    <p>Share your feedback with us:</p>
-    <iframe src="https://www.google.com/forms/about/" width="600" height="500" border="2"></iframe>
-
-    <br><br>
-
-    <h3><strong>Hospital Information Portal:</strong></h3>
-    <iframe src="https://www.who.int/" width="800" height="400"></iframe>
-
-    <br>
-    <hr>
-
-    <!-- ============ SECTION 5: SCHEDULE TABLE ============ -->
-    <h2 id="schedule">📅 OPD Schedule & Timings</h2>
-
-    <table border="1" width="100%">
-        <tr style="background-color: #e3f2fd;">
-            <th><strong>Department</strong></th>
-            <th><strong>Doctor Name</strong></th>
-            <th><strong>Monday - Friday</strong></th>
-            <th><strong>Saturday</strong></th>
-            <th><strong>Sunday</strong></th>
-        </tr>
-        <tr>
-            <td><strong>General Medicine</strong></td>
-            <td>Dr. Rajesh Kumar</td>
-            <td>10 AM - 2 PM</td>
-            <td>10 AM - 1 PM</td>
-            <td>Closed</td>
-        </tr>
-        <tr>
-            <td><strong>Cardiology</strong></td>
-            <td>Dr. Amit Patel</td>
-            <td>9 AM - 1 PM</td>
-            <td>9 AM - 12 PM</td>
-            <td>Emergency Only</td>
-        </tr>
-        <tr>
-            <td><strong>Pediatrics</strong></td>
-            <td>Dr. Anjali Verma</td>
-            <td>10 AM - 5 PM</td>
-            <td>10 AM - 2 PM</td>
-            <td>2 PM - 5 PM</td>
-        </tr>
-        <tr>
-            <td><strong>Dermatology</strong></td>
-            <td>Dr. Sanya Gupta</td>
-            <td>2 PM - 6 PM</td>
-            <td>2 PM - 5 PM</td>
-            <td>Closed</td>
-        </tr>
-        <tr>
-            <td><strong>Dental</strong></td>
-            <td>Dr. Vikram Singh</td>
-            <td>11 AM - 4 PM</td>
-            <td>11 AM - 3 PM</td>
-            <td>Closed</td>
-        </tr>
-    </table>
-
-    <br><br>
-    <hr>
-
-    <!-- ============ FOOTER ============ -->
-    <h3 align="center"><strong>Contact Information:</strong></h3>
-    <p align="center">
-        📞 Main Line: +91-22-1234-5678 | 
-        🚑 Emergency: +91-22-9999-9999 | 
-        📧 Email: <a href="mailto:opd@cityhospital.com">opd@cityhospital.com</a><br>
-        🌐 Website: <a href="https://www.cityhospital.com" target="_blank">www.cityhospital.com</a>
-    </p>
-
-    <p align="center">
-        <small>&copy; 2026 City Healthcare Hospital. All Rights Reserved.</small>
-    </p>
-
-    <br>
-    <img src="https://via.placeholder.com/1200x80/424242/ffffff?text=Thank+You+for+Choosing+City+Healthcare+Hospital" alt="Footer" width="1200" height="80">
 
 </body>
 </html>
