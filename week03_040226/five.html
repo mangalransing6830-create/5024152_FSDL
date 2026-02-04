@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agnel Cafeteria</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f5f1;
+}
+
+/* HERO */
+.hero {
+    height: 40vh;
+    min-height: 260px;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1470&q=80')
+    center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+
+/* MENU */
+.menu-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    color: #ff7043;
+    font-weight: bold;
+}
+
+/* ORDER FORM */
+.order-card {
+    background: linear-gradient(135deg, #fff8f4, #ffffff);
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: transform 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ff7043;
+    box-shadow: 0 0 12px rgba(255,112,67,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand fw-bold">🍽 Agnel Cafeteria</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Agnel Cafeteria</h1>
+<p class="lead">Fresh • Affordable • Campus Favorite</p>
+</div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="container my-3">
+<nav>
+<ol class="breadcrumb">
+<li class="breadcrumb-item">Home</li>
+<li class="breadcrumb-item active">Menu</li>
+</ol>
+</nav>
+</div>
+
+<!-- MENU -->
+<div class="container my-5">
+<h2 class="text-center mb-4">Our Menu</h2>
+
+<div class="row g-4 justify-content-center">
+
+<!-- ITEM -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card menu-card shadow">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80">
+<div class="card-body text-center">
+<h5>Cappuccino</h5>
+<p class="price">₹120</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card menu-card shadow">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80">
+<div class="card-body text-center">
+<h5>Cold Coffee</h5>
+<p class="price">₹140</p>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card menu-card shadow">
+<img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80">
+<div class="card-body text-center">
+<h5>Veg Burger</h5>
+<p class="price">₹180</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card menu-card shadow">
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80">
+<div class="card-body text-center">
+<h5>French Fries</h5>
+<p class="price">₹100</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card menu-card shadow">
+<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80">
+<div class="card-body text-center">
+<h5>Cheese Pizza</h5>
+<p class="price">₹220</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card menu-card shadow">
+<img src="https://images.unsplash.com/photo-1604908177522-7caa3b07a6a1?auto=format&fit=crop&w=600&q=80">
+<div class="card-body text-center">
+<h5>Veg Momos</h5>
+<p class="price">₹140</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-5 col-md-5 col-lg-3">
+    <div class="card menu-card shadow">
+        <img src="https://media0.giphy.com/media/Gb44m6g9R0wCoxZu8k/giphy.gif" 
+             class="card-img-top"
+             alt="Samosa GIF">
+        <div class="card-body text-center">
+            <h5>Samosa</h5>
+            <p class="text-muted">Crispy & Delicious Snack</p>
+            <p class="price">₹70</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+<div class="card menu-card shadow">
+<img src="https://images.unsplash.com/photo-1625944525533-473f1a3c3f2c?auto=format&fit=crop&w=600&q=80">
+<div class="card-body text-center">
+<h5>Masala Dosa</h5>
+<p class="price">₹130</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ORDER FORM -->
+<div class="container my-5">
+<h2 class="text-center mb-4">Place Your Order</h2>
+
+<div class="row justify-content-center">
+<div class="col-md-8">
+
+<div class="order-card p-4">
+
+<form>
+<div class="row g-3">
+
+<div class="col-md-6">
+<label class="form-label">👤 Customer Name</label>
+<input type="text" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">🪑 Table Number</label>
+<input type="number" class="form-control" required>
+</div>
+
+<div class="col-12">
+<label class="form-label">🍔 Menu Item</label>
+<select class="form-select" required>
+<option>Select Item</option>
+<option>Cappuccino</option>
+<option>Cold Coffee</option>
+<option>Veg Sandwich</option>
+<option>Veg Burger</option>
+<option>French Fries</option>
+<option>Cheese Pizza</option>
+<option>Veg Momos</option>
+<option>Masala Dosa</option>
+</select>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">🔢 Quantity</label>
+<input type="number" class="form-control" min="1" value="1">
+</div>
+
+<div class="col-md-6">
+<label class="form-label">🔥 Spice Level</label>
+<select class="form-select">
+<option>Normal</option>
+<option>Medium</option>
+<option>Spicy</option>
+</select>
+</div>
+
+<div class="col-12">
+<label class="form-label">📝 Special Request</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+<button class="btn btn-warning btn-lg px-5 me-3">🛒 Place Order</button>
+<button type="reset" class="btn btn-secondary btn-lg px-5">Clear</button>
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -3,221 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HiFive Cafe</title>
+<title>Agnel Cafeteria</title>
 <style>
-/* GOOGLE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+    /* GLOBAL STYLING */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #fdf6f0;
+        color: #333;
+    }
 
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fdf6f0;
-    color: #333;
-}
-
-/* HERO SECTION */
-header {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 3.2em;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 2px;
-}
-
-/* CONTAINERS */
-.container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-/* SECTION TITLES */
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #6d4c41;
-    font-size: 2.2em;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #ff7043;
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
-}
-
-/* MENU GRID */
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-/* GLASSMORPHISM CARDS */
-.menu-card {
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-
-.menu-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.menu-card:hover img {
-    transform: scale(1.05);
-}
-
-.menu-card .info {
-    padding: 15px;
-    text-align: center;
-}
-
-.menu-card .info h3 {
-    margin: 10px 0 5px;
-    color: #4e342e;
-}
-
-.menu-card .info p {
-    margin: 5px 0;
-    color: #6d4c41;
-    font-size: 0.95em;
-}
-
-.menu-card .info span {
-    font-weight: 700;
-    color: #ff7043;
-    font-size: 1.1em;
-}
-
-/* ORDER FORM */
-.order-form {
-    background: rgba(255,255,255,0.85);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    max-width: 650px;
-    margin: 0 auto 60px;
-}
-
-.order-form label {
-    display: block;
-    font-weight: 500;
-    margin-top: 15px;
-    color: #5d4037;
-}
-
-.order-form input,
-.order-form select,
-.order-form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    margin-top: 5px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    box-sizing: border-box;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.order-form input:focus,
-.order-form select:focus,
-.order-form textarea:focus {
-    border-color: #ff7043;
-    box-shadow: 0 0 10px rgba(255,112,67,0.4);
-    outline: none;
-}
-
-.order-form button {
-    padding: 12px 28px;
-    font-size: 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-right: 10px;
-    transition: transform 0.2s, opacity 0.3s;
-}
-
-.order-form button[type="submit"] {
-    background-color: #ff7043;
-    color: white;
-    font-weight: 500;
-}
-
-.order-form button[type="reset"] {
-    background-color: #8d6e63;
-    color: white;
-    font-weight: 500;
-}
-
-.order-form button:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
-/* RESPONSIVE */
-@media (max-width: 700px) {
+    /* HEADER */
     header {
+        height: 50vh;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 3em;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    /* CONTAINER */
+    .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #6d4c41;
         font-size: 2em;
-        padding: 0 10px;
+        position: relative;
     }
+
+    h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: #ff7043;
+        margin: 10px auto 0 auto;
+        border-radius: 2px;
+    }
+
+    /* MENU GRID */
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .menu-card {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
     .menu-card img {
+        width: 100%;
         height: 150px;
+        object-fit: cover;
     }
-}
+
+    .menu-card .info {
+        padding: 10px 15px;
+    }
+
+    .menu-card .info h3 {
+        margin: 10px 0 5px;
+        color: #4e342e;
+    }
+
+    .menu-card .info p {
+        margin: 5px 0;
+        color: #6d4c41;
+        font-size: 0.9em;
+    }
+
+    .menu-card .info span {
+        font-weight: 700;
+        color: #ff7043;
+        font-size: 1em;
+    }
+
+    /* ORDER FORM */
+    .order-form {
+        background: rgba(255,255,255,0.95);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        max-width: 500px;
+        margin: 50px auto;
+    }
+
+    .order-form h3 {
+        text-align: center;
+        color: #6d4c41;
+        margin-bottom: 20px;
+    }
+
+    .order-form label {
+        display: block;
+        margin-top: 10px;
+        font-weight: 500;
+        color: #5d4037;
+    }
+
+    .order-form input,
+    .order-form select {
+        width: 100%;
+        padding: 10px 12px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        box-sizing: border-box;
+        transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    .order-form input:focus,
+    .order-form select:focus {
+        border-color: #ff7043;
+        box-shadow: 0 0 8px rgba(255,112,67,0.4);
+        outline: none;
+    }
+
+    .order-form button {
+        width: 48%;
+        padding: 10px 0;
+        margin-top: 15px;
+        margin-right: 4%;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: transform 0.2s, opacity 0.3s;
+    }
+
+    .order-form button[type="submit"] {
+        background-color: #ff7043;
+        color: white;
+    }
+
+    .order-form button[type="reset"] {
+        background-color: #8d6e63;
+        color: white;
+    }
+
+    .order-form button:hover {
+        transform: translateY(-2px);
+        opacity: 0.9;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+        header {
+            font-size: 2em;
+            height: 40vh;
+        }
+        .menu-card img {
+            height: 120px;
+        }
+        .order-form button {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
 </style>
 </head>
 <body>
 
-<header>HiFive Cafe</header>
+<header>Agnel Cafeteria</header>
 
 <div class="container">
-    <h2>Our Premium Menu</h2>
+    <h2>Our Delicious Menu</h2>
     <div class="menu-grid">
+        <div class="menu-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Samosa">
+            <div class="info">
+                <h3>Samosa</h3>
+                <p>Snack</p>
+                <span>₹50</span>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="https://sl.bing.net/fM4RRLUfSuG" alt="Veg Sandwich">
+            <div class="info">
+                <h3>Veg Sandwich</h3>
+                <p>Snack</p>
+                <span>₹120</span>
+            </div>
+        </div>
         <div class="menu-card">
             <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Cappuccino">
             <div class="info">
                 <h3>Cappuccino</h3>
                 <p>Beverage</p>
-                <span>₹120</span>
-            </div>
-        </div>
-        <div class="menu-card">
-            <img src="https://images.unsplash.com/photo-1510626176961-4b9a1b0f3626?auto=format&fit=crop&w=600&q=80" alt="Green Tea">
-            <div class="info">
-                <h3>Green Tea</h3>
-                <p>Beverage</p>
-                <span>₹80</span>
-            </div>
-        </div>
-        <div class="menu-card">
-            <img src="https://images.unsplash.com/photo-1605472569343-9ec1c17fbd4c?auto=format&fit=crop&w=600&q=80" alt="Veg Sandwich">
-            <div class="info">
-                <h3>Veg Sandwich</h3>
-                <p>Snack</p>
-                <span>₹150</span>
+                <span>₹100</span>
             </div>
         </div>
         <div class="menu-card">
@@ -233,39 +231,33 @@ h2::after {
             <div class="info">
                 <h3>Mango Smoothie</h3>
                 <p>Beverage</p>
-                <span>₹180</span>
+                <span>₹150</span>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <h2>Place Your Order</h2>
-    <form class="order-form" method="POST" action="submit_order.html">
-        <label for="customerName">Customer Name:</label>
-        <input type="text" id="customerName" name="customerName" required>
+<div class="order-form">
+    <h3>Place Your Order</h3>
+    <form method="POST" action="submit_order.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-        <label for="tableNumber">Table Number:</label>
-        <input type="number" id="tableNumber" name="tableNumber" required min="1">
-
-        <label for="menuItem">Select Menu Item:</label>
-        <select id="menuItem" name="menuItem" required>
+        <label for="item">Select Item:</label>
+        <select id="item" name="item" required>
             <option value="">--Select--</option>
-            <option value="Cappuccino">Cappuccino</option>
-            <option value="Green Tea">Green Tea</option>
+            <option value="Samosa">Samosa</option>
             <option value="Veg Sandwich">Veg Sandwich</option>
+            <option value="Cappuccino">Cappuccino</option>
             <option value="Chocolate Cake">Chocolate Cake</option>
             <option value="Mango Smoothie">Mango Smoothie</option>
         </select>
 
         <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" required min="1">
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-        <label for="specialRequest">Special Requests:</label>
-        <textarea id="specialRequest" name="specialRequest" rows="3" placeholder="Extra sugar, no milk, etc."></textarea>
-
-        <button type="submit">Place Order</button>
-        <button type="reset">Clear Form</button>
+        <button type="submit">Order Now</button>
+        <button type="reset">Clear</button>
     </form>
 </div>
 
